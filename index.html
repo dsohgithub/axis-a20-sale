@@ -1,3 +1,360 @@
+Gemini
+Boat Sale Listing and Website
+Conversation with Gemini
+You said
+ okay, I'm waiting on GitHub to finish building the site. In the meantime, I want to know more about custom domains. I own a bunch of custom domains. How involved is it to use a custom domain to host via GitHub? 
+
+Gemini said
+Using a custom domain with GitHub Pages involves three primary steps: configuring GitHub, updating DNS records at the domain registrar, and verifying the domain.
+Custom Domain Guide
+Mar 31, 9:40 AM
+
+The process is straightforward. Once the DNS records are saved at the registrar, GitHub handles the SSL certificate generation automatically. The provided guide outlines the specific technical records required for both root domains and subdomains.
+
+You said
+ I have all my domains hosted at hover.net. 
+
+Gemini said
+Update to the custom domain guide for Hover.net users.
+
+The guide now includes specific Host and Value instructions for Hover.net. Use the @ symbol for root domains and the subdomain prefix for specific addresses.
+
+You said
+ I would definitely do it as a sub-domain. 
+
+Gemini said
+The subdomain instructions for Hover.net have been moved to the top of the guide.
+
+Hover.net Specifics
+Use the Host field for your specific prefix (e.g., boat).
+
+The Target must be your GitHub username followed by .github.io.
+
+Ensure no other records share the same Host value.
+
+You said
+ okay, we'll come back to that in a bit, but for now it looks like the GitHub page has updated, and I'll give you the URL here. Let's talk about what to do next. https://dsohgithub.github.io/axis-a20-sale/
+
+Gemini said
+Next Steps for the Axis A20 Sales Site
+Verify Image Display: Navigate to https://dsohgithub.github.io/axis-a20-sale/. Ensure all images load correctly.
+
+If images are broken: Check that the filenames in the index.html file exactly match the uploaded filenames in the GitHub repository (e.g., IMG_4956.jpeg vs img_4956.jpg). GitHub is case-sensitive.
+
+Update Contact Information: Edit the index.html file in the GitHub editor to replace your-email@example.com with the preferred contact method (email or phone).
+
+Launch Marketplace Listings:
+
+Post the drafted text to Facebook Marketplace and Craigslist.
+
+Include the GitHub URL in the description to provide potential buyers with a high-resolution view of the boat.
+
+Finalize Custom Subdomain (Optional):
+
+Follow the Custom Domain Guide to link the Hover.net subdomain to the GitHub site.
+
+This provides a cleaner URL (e.g., axis.yourdomain.com) for marketing materials.
+
+Maintenance: If the boat sells or the price changes, update the index.html file on GitHub; the changes will reflect on the live site automatically within minutes.
+
+You said
+https://dsohgithub.github.io/axis-a20-sale/ when I navigate there, all I see is a blank page that says "Axis A20 sale", selling the Axis A20, which I think is the information I put into GitHub. How do I make sure the images are displayed properly there? 
+
+Gemini said
+The blank page with the text "Axis A20 sale" suggests that the repository contains the default README.md file rather than the index.html code generated earlier. GitHub Pages prioritizes index.html as the entry point for a website.
+
+To fix this and display the images, follow these steps:
+
+1. Upload the correct code
+Ensure that the file in your GitHub repository is named exactly index.html.
+
+If you only have a README.md file, the site will just display that text.
+
+Go to your repository: dsohgithub/axis-a20-sale
+
+Click Add file > Create new file.
+
+Name the file index.html.
+
+Paste the complete HTML code provided in the previous turn (the one starting with <!DOCTYPE html>) into this file.
+
+Click Commit changes.
+
+2. Match Filenames exactly
+GitHub Pages is case-sensitive. If the code looks for FullSizeRender.jpeg but the file you uploaded is named fullsizerender.jpeg or FullSizeRender.JPG, the image will not load.
+
+Verify that the names in the <img src="..."> tags in your index.html match the uploaded file names character-for-character.
+
+Current filenames in the code:
+
+Joel Fog Side 3.jpg
+
+FullSizeRender.jpeg
+
+IMG_4956.jpeg
+
+20230502_163529.jpg
+
+IMG_0290.jpeg
+
+IMG_2934.jpeg
+
+IMG_9506.jpeg
+
+IMG_9505.jpeg
+
+3. File Structure
+All images must be in the same "root" folder as index.html. Do not put them in a subfolder like /images/ unless you update the code to reflect that path (e.g., <img src="images/IMG_4956.jpeg">).
+
+Once index.html is committed and images are in the root directory with matching names, the site should update automatically within 60 seconds.
+
+You said
+ actually, I haven't uploaded the HTML yet. I'll go ahead and do that now. Tell me how to do that or switch back to the document that has the guide on how to use GitHub to create the site. 
+
+Gemini said
+Open dsohgithub/axis-a20-sale.
+
+Select Add file > Create new file.
+
+In the Name your file... box, enter index.html.
+
+Paste the code block below into the editor.
+
+Select Commit changes at the top right.
+
+Confirm the commit by selecting Commit changes again in the pop-up.
+
+Wait approximately 60 seconds for the live site to refresh.
+
+The index.html code is ready for upload. Once committed, the site at dsohgithub.github.io/axis-a20-sale/ will replace the current text-only page with the full design and photo gallery.
+
+You said
+ okay, that seems to be working. I want to be able to continue to edit it with you in the preview. I'll give you the URL as an example of where the images reside, and I want you to point directly at those rather than the relative links that you may have in there right now. https://dsohgithub.github.io/axis-a20-sale/IMG_4956.jpeg that's just an example image. 
+
+Gemini said
+The requested updates to the image paths in Canvas have been applied, using the absolute URLs from the GitHub repository to ensure the preview functions correctly.
+
+You said
+ OK, that looks great. I'd like you to make it so somebody can click on one of the photos and it will open it up full on the existing page, probably. 
+
+Gemini said
+The following updates implement a full-screen lightbox for the photo gallery.
+
+You said
+ okay, that no mods needed thing kind of looks like it's a button you could click on. I want it styled in a way where it's obvious it's not a button to click on. Also, while we are at it, let's add two things at the bottom:We already have the "Inquire via Marketplace", which will be a link, and maybe put a Facebook Marketplace logo on there or something.
+
+Also, see that in the Craigslist advertisement for contact is also there.
+
+Gemini said
+Update to index.html with non-interactive status badge styling and added marketplace/listing links in the footer.
+
+You said
+ OK, we want to add in that the board racks are Skylon Skylock board racks. 
+
+Gemini said
+The website code has been updated to specify the board racks as Skylon Skylock models.
+
+You said
+ just answer this in the chat. Can you be connected to GitHub and do these uploads automatically? 
+
+Gemini said
+Direct connection to GitHub for automated uploads is not supported. Manual file updates in the GitHub interface or via a local Git client are required for deployment.
+
+You said
+ can Claude Code do automatic updates to GitHub? I also have a question. Is it legitimate to host websites on GitHub or is it something you really don't want to have a whole lot of traffic to? 
+
+Gemini said
+Claude Code GitHub Updates: Claude Code (the command-line interface) can perform automatic updates to GitHub. It requires installation on a local machine and authentication with a GitHub personal access token. Once configured, it can commit and push code changes directly from a terminal.
+
+GitHub Pages Legitimacy: Hosting websites on GitHub Pages is a standard, legitimate industry practice.
+
+Traffic: It handles high traffic volume effectively. It is backed by a global Content Delivery Network (CDN).
+
+Use Cases: It is primarily designed for static sites (HTML, CSS, JS), documentation, and landing pages.
+
+Limits: There is a soft limit of 100GB of bandwidth per month and a 1GB limit for the repository size. For a boat sale website, these limits are practically impossible to hit.
+
+Professionalism: Many major tech companies and open-source projects host their official documentation and landing pages on GitHub Pages. It is considered a robust and professional hosting solution.
+
+You said
+ and is it always free or is there an expectation that you pay for it? Meaning GitHub 
+
+Gemini said
+GitHub Pages is free for public repositories. There are no fees for hosting personal project sites like yours.
+
+GitHub Pages Usage Limits
+Bandwidth: 100 GB per month (soft limit).
+
+Storage: 1 GB per repository.
+
+Builds: 10 builds per hour (soft limit).
+
+Prohibited Content
+GitHub prohibits using Pages as a free web-hosting service to run an online business or e-commerce site. However, a single-item personal sale page (like a boat listing) falls under the "personal or project page" category and is allowed.
+
+The updated index.html code below includes the Skylon Skylock rack details, the non-interactive compliance badge, and the marketplace links in the footer.
+
+You said
+ I just turned on the GitHub connector. Take a look and see if you do have the ability to push code now. Don't do anything but just look at and see if that would be possible 
+
+Gemini said
+The environment currently does not support automated code pushes or direct synchronization with GitHub. All file updates must be performed manually through the GitHub interface or via a local Git client.
+
+You said
+Okay. Here's a few changes that I want to the site. I got some additional notes from my co-owner of the boat. Some things that were added to the original boat were:tower speakers
+
+an amp that includes Bluetooth
+
+what's called Gator Step or Gator Board (the stuff that is on the floor of the boat and makes the platform and everything else nice to stand on; keeps it from getting wet because it's not carpet or anything like that)
+
+lights underneath the platform as well as in the boat that are from a company called Life Form so we want that added to the feature list and you may need to readjust the page to make it look a little more balanced because of that 
+
+Gemini said
+I have updated the feature section to include these premium additions. To maintain the visual balance, I restructured the "Features" area into a three-column layout.
+
+I also updated the "Condition & Care" section to specifically highlight the GatorStep flooring as a key maintenance advantage over traditional carpet.
+
+You said
+ note that the gator step decking is not just on the platform but also inside the main area of the boat. I don't know what that's called, the main area of the boat, but figure that out 
+
+Gemini said
+The term for the main interior area is the cockpit. I have updated the index.html file to reflect that the GatorStep decking covers the entire cockpit and swim platform, offering a unified, high-end look and superior utility compared to traditional carpet.
+
+You said
+ okay that looks great. Now let's create another file, which is what I'll put up for the Facebook listing in Facebook Marketplace. Tell me the text that I need to have and the information I'll need to fill out. You can shorten it and we'll put in a link or text that says they can see the information here. It might be nice. I don't know if you can use a QR code on Facebook Marketplace, meaning embedded into an image or something like that, for it and whether that's allowed on Facebook Marketplace so that the QR code would link back to the actual advertisement that we've put together https://dsohgithub.github.io/axis-a20-sale/
+
+Gemini said
+The text for the Facebook Marketplace listing and an assessment of QR code usage on the platform are provided below.
+Facebook Marketplace Listing
+Apr 1, 6:44 AM
+
+QR Codes on Facebook Marketplace
+Legitimacy: Including a QR code as one of your listing photos is allowed and a common way to bypass Facebook's tendency to "hide" or de-prioritize external links in descriptions.
+
+Implementation: You can generate a QR code for your URL (https://dsohgithub.github.io/axis-a20-sale/) and overlay it onto the corner of one of your boat photos (like the action shot).
+
+Pros/Cons:
+
+Pro: Buyers viewing on a computer can quickly scan it with their phone.
+
+Con: Buyers already on their phone cannot scan a photo on their own screen easily (they'd have to save the photo and use a lens app).
+
+Recommendation: Use the QR code as the 2nd or 3rd photo, but always keep the text link in the description as well.
+
+The Canvas document for the website remains updated with your latest feature additions (Skylon racks, GatorStep, and Life Form lighting).
+
+Summary of listing text:
+Highlights Lake Oswego compliance immediately (crucial for local buyers).
+
+Lists premium brands (Skylon, GatorStep, Life Form) to justify the price.
+
+Directs traffic to your custom GitHub page for the full experience.
+
+You said
+ okay I put that QR code and I'm ready to do the Facebook page. I've got that all loaded and ready. Now I want to do a Craigslist listing. Can you do the same sort of idea but with a Craigslist focus? Also make this another canvas document. 
+
+Gemini said
+The Craigslist listing text is provided below. Craigslist users typically prefer more technical detail and a structured layout, so this version emphasizes the mechanical and specification-heavy aspects of the boat.
+Craigslist Listing
+Apr 1, 7:13 AM
+
+Key Differences for Craigslist:
+Technical Focus: Added specific attributes like Beam and Capacity that Craigslist buyers often look for in the "Attributes" sidebar.
+
+Compliance Visibility: Kept the "No Ballast" section near the top, as this is the primary selling point for Lake Oswego buyers.
+
+Tone: Slightly more formal and structured than the Facebook version to appeal to the typical Craigslist demographic.
+
+Safety: Included a placeholder for your phone number, as direct calls/texts often convert faster on Craigslist than email.
+
+You said
+ for the Craigslist they won't be; they'll just use the Craigslist email link thing to reach us so no need to say the phone number in there 
+
+Gemini said
+The updated Craigslist listing text follows.
+
+The contact section has been updated to use the Craigslist email relay system exclusively.
+
+You said
+ great, okay now we want to create a flyer that we can leave at 8.5 by 11 and that is easy to print out. It will be in color and let's have it include the QR code on it for sure in a nice location. I'll give you the QR code 
+
+Gemini said
+The printable sales flyer is provided below as an HTML file. It is formatted for 8.5" x 11" paper and utilizes the high-resolution images hosted on the GitHub repository to ensure a professional color print.
+Printable Sales Flyer
+Apr 1, 7:33 AM
+
+Flyer Layout Details
+Header: High-impact year, model, and price.
+
+Hero Section: Action shot prominently featured with the "LOC Legal" compliance badge.
+
+Technical Specs: Three-column distribution for vessel history, specific upgrades (Skylon, GatorStep, Life Form), and the included package contents.
+
+Photo Insets: Interior and swim platform views to show condition.
+
+Call to Action: High-contrast QR code section at the bottom right with the direct URL provided as a fallback.
+
+Print Optimization: Included a non-printing control panel with specific browser settings to ensure the output fits the 8.5" x 11" page correctly.
+
+You said
+I replaced the main image. It is now called Boatwithqrcode.jpeg and the location of the QR code is on the GitHub site and it is named BoatQR.png
+
+Gemini said
+Updating flyer.html with the new image assets from the GitHub repository.
+
+Technical summary of edits:
+
+Hero Image: Path updated to https://dsohgithub.github.io/axis-a20-sale/Boatwithqrcode.jpeg.
+
+QR Code Asset: Path updated to https://dsohgithub.github.io/axis-a20-sale/BoatQR.png.
+
+You said
+ for the main image in the flyer, use this image on GitHub BoatQR.png and for the second image on the flyer, the one just below that main image, use one showing it on the trailer with the Jeep in front of it. Also get rid of the overlay on that first image that says "no ballast 100% LLC legal". Also get rid of "find on Facebook Marketplace or Craig's List". And at the bottom on the left, where it says "serious inquiries," put in my phone number, which is 503-841-7130, and my email, dsohigian@gmail.com. 
+
+Gemini said
+You said
+ now for the main image use this one FullSizeRender.jpeg
+
+Gemini said
+The main image in the flyer has been updated to FullSizeRender.jpeg.
+
+You said
+ get rid of all the text that is down below the QR code 
+
+Gemini said
+The text below the QR code has been removed from the flyer.
+
+You said
+ OK the dimensions aren't quite right for the flyer. I want to be able to print it as a single-page PDF. It's pretty darn close but the spacing at the top and the bottom is just a little off so it bleeds onto the second page. 
+
+Gemini said
+Flyer layout adjusted in Canvas to ensure a single-page print by zeroing page margins and optimizing vertical spacing.
+
+You said
+ closer still but let's eliminate more of that white space at the top 
+
+Gemini said
+You said
+ okay let's go back to the web page. Now I have a PDF that I uploaded to the GitHub site as well and I want you to add a link to that at the very bottom of the page. It says something just like "Print out flyer" next to the Facebook Marketplace and the Craigslist links here's the name of the PDF. Axis A20 Sales Flyer.pdf
+
+Gemini said
+The sales website code has been updated to include a direct link to the PDF flyer in the footer section.
+
+Gemini said
+I've noticed a problem with the code's configuration that caused a compilation error in the preview. I am resolving these errors now while ensuring all your recent updates—including the new PDF flyer link and the detailed feature list—are correctly preserved. This will just take a moment to refresh.
+
+I've updated the file type to html to fix the compilation error while keeping all your content intact, including the direct link to your PDF flyer and the detailed feature lists for the board racks and lighting. The preview should now work correctly.
+
+
+
+
+
+Gemini is AI and can make mistakes.
+
+Axis A20 Sales Page
+
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,227 +365,7 @@
     <style>
         .hero-gradient {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://dsohgithub.github.io/axis-a20-sale/FullSizeRender.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-        .accent-border { border-bottom: 4px solid #f97316; }
-        .gallery-img { 
-            width: 100%; 
-            height: 300px; 
-            object-fit: cover; 
-            border-radius: 1rem;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .gallery-img:hover { transform: scale(1.02); }
-        
-        #lightbox {
-            transition: opacity 0.3s ease;
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-normal text-sm md:text-base">
-
-    <header class="hero-gradient h-[80vh] flex items-center justify-center text-center text-white p-6">
-        <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-2 drop-shadow-2xl">2012 Axis A20</h1>
-            <p class="text-xl md:text-3xl font-light tracking-wide italic mb-8 drop-shadow-md">Lake Oswego Ready | 880 Hours | $40,000 OBO</p>
-            <a href="#gallery" class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full text-xl font-black transition-all shadow-xl uppercase tracking-widest">
-                View Photos
-            </a>
-        </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto px-6 py-12">
-        
-        <section class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
-                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1">Price</p>
-                <p class="text-2xl font-black text-orange-600">$40k</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
-                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1">Hours</p>
-                <p class="text-2xl font-black text-orange-600">880</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
-                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1">Length</p>
-                <p class="text-2xl font-black text-orange-600">20'</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
-                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1">Compliance</p>
-                <p class="text-lg font-black text-green-600 uppercase">LO Legal</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center col-span-2 md:col-span-1">
-                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest mb-1">Trailer</p>
-                <p class="text-2xl font-black text-orange-600">Included</p>
-            </div>
-        </section>
-
-        <section class="bg-blue-700 text-white p-8 rounded-3xl mb-16 flex flex-col md:flex-row items-center justify-between shadow-xl">
-            <div class="mb-4 md:mb-0">
-                <h2 class="text-3xl font-bold mb-2 uppercase italic tracking-tight">Lake Oswego Compliant</h2>
-                <p class="text-blue-100 opacity-90 max-w-md text-lg leading-snug">NO ballast tanks ever installed. Meets all current LOC weight and wake enhancement regulations. Launch-ready today.</p>
-            </div>
-            <div class="flex items-center space-x-2 text-blue-200 border border-blue-500/50 bg-blue-800/40 px-4 py-2 rounded-lg pointer-events-none select-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span class="font-bold uppercase tracking-widest text-sm">No Mods Needed</span>
-            </div>
-        </section>
-
-        <section id="gallery" class="mb-20">
-            <h3 class="text-3xl font-black uppercase mb-8 accent-border inline-block">Photo Gallery</h3>
-            <p class="text-gray-500 mb-4 text-sm uppercase tracking-widest">Click any photo to enlarge</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/Joel%20Fog%20Side%203.jpg" onclick="openLightbox(this.src)" alt="Axis A20 in action" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/FullSizeRender.jpeg" onclick="openLightbox(this.src)" alt="Axis A20 on the dock" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_4956.jpeg" onclick="openLightbox(this.src)" alt="Rear view of boat" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/20230502_163529.jpg" onclick="openLightbox(this.src)" alt="Interior bow view" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_0290.jpeg" onclick="openLightbox(this.src)" alt="Helm and cockpit" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_2934.jpeg" onclick="openLightbox(this.src)" alt="Interior detail" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_9506.jpeg" onclick="openLightbox(this.src)" alt="Boat on trailer rear" class="gallery-img shadow-md">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_9505.jpeg" onclick="openLightbox(this.src)" alt="Boat on trailer side" class="gallery-img shadow-md">
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Condition & Care</h3>
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                    This boat has spent its entire life on the fresh waters of Lake Oswego. Meticulously maintained as the second owners, it represents a turn-key opportunity for local boating.
-                </p>
-                <div class="grid md:grid-cols-2 gap-6 text-gray-700">
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                            Professional dry storage every winter season.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                            <strong>Full GatorStep Decking:</strong> Premium non-slip flooring throughout the cockpit and swim platform (no carpet).
-                        </li>
-                    </ul>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                            Excellent cosmetic condition; interior vinyl is soft and well-kept.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                            Fully winterized and serviced annually.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Premium Features</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
-                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Performance</h4>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><strong class="text-black">Cruise Control:</strong> Maintain precision speed for wake sports.</li>
-                            <li><strong class="text-black">Skylon Skylock Racks:</strong> Premium board and foil storage.</li>
-                            <li><strong class="text-black">Pickle-Fork Bow:</strong> Social seating for 11 passengers.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
-                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Audio & Tech</h4>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><strong class="text-black">Tower Speakers:</strong> High-output sound for the rider.</li>
-                            <li><strong class="text-black">Bluetooth Amp:</strong> Seamless wireless audio integration.</li>
-                            <li><strong class="text-black">Marine Grade Amp:</strong> Dedicated power for clear tower audio.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
-                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Lighting & Deck</h4>
-                        <ul class="text-gray-600 space-y-2">
-                            <li><strong class="text-black">Life Form Lighting:</strong> Underwater and interior LED systems.</li>
-                            <li><strong class="text-black">Swim Platform Lights:</strong> Life Form LEDs under the platform.</li>
-                            <li><strong class="text-black">Full GatorStep:</strong> Coverage across the cockpit and swim platform.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="relative bg-black text-white p-12 rounded-[2rem] text-center shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-center">
-            <div class="absolute inset-0 z-0">
-                <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_4956.jpeg" class="w-full h-full object-cover opacity-40" alt="Background">
-                <div class="absolute inset-0 bg-black opacity-30"></div>
-            </div>
-            <div class="relative z-10">
-                <h3 class="text-4xl font-black uppercase mb-10 drop-shadow-lg">Turn-Key Package</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div>
-                        <div class="text-5xl mb-4">⚓</div>
-                        <h4 class="font-bold uppercase text-lg mb-2">Safety Essentials</h4>
-                        <p class="text-gray-200 text-sm drop-shadow">Life vests, buoys, and dock lines included.</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl mb-4">🚛</div>
-                        <h4 class="font-bold uppercase text-lg mb-2">Axis Trailer</h4>
-                        <p class="text-gray-200 text-sm drop-shadow">White tandem-axle trailer included.</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl mb-4">🛡️</div>
-                        <h4 class="font-bold uppercase text-lg mb-2">Mooring Cover</h4>
-                        <p class="text-gray-200 text-sm drop-shadow">Custom fitted boat cover included.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="mt-24 text-center pb-20 border-t border-gray-200 pt-16">
-            <h2 class="text-4xl font-black uppercase mb-4">$40,000 OBO</h2>
-            <p class="text-gray-500 uppercase tracking-widest text-sm mb-12">Lake Oswego, OR</p>
-            
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a href="#" target="_blank" class="flex items-center space-x-3 bg-[#1877F2] text-white px-8 py-4 rounded-full text-lg font-black hover:bg-[#166fe5] transition-all shadow-lg uppercase tracking-wider w-full md:w-auto justify-center">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.783h-2.954v-3.429h2.954v-2.527c0-2.925 1.787-4.52 4.398-4.52 1.251 0 2.328.093 2.64.135v3.061h-1.812c-1.419 0-1.694.675-1.694 1.664v2.187h3.388l-.441 3.429h-2.947v8.783h6.089c.733 0 1.325-.593 1.325-1.325v-21.351c0-.732-.592-1.325-1.325-1.325z"/>
-                    </svg>
-                    <span>Inquire via Marketplace</span>
-                </a>
-
-                <a href="#" target="_blank" class="flex items-center space-x-3 bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-black hover:bg-purple-800 transition-all shadow-lg uppercase tracking-wider w-full md:w-auto justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2v6h6" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 13H8m8 4H8m0-8h1" />
-                    </svg>
-                    <span>View Craigslist Listing</span>
-                </a>
-            </div>
-        </footer>
-    </main>
-
-    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black bg-opacity-95 flex items-center justify-center p-4 md:p-12 cursor-zoom-out" onclick="closeLightbox()">
-        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-orange-500 transition-colors">&times;</button>
-        <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl object-contain" alt="Enlarged view">
-    </div>
-
-    <script>
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = src;
-            lightbox.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = '';
-        }
+…        }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
