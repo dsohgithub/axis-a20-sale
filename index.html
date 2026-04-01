@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-normal">
+<body class="bg-gray-50 text-gray-900 font-sans leading-normal text-sm md:text-base">
 
     <header class="hero-gradient h-[80vh] flex items-center justify-center text-center text-white p-6">
         <div class="max-w-4xl">
@@ -69,7 +69,7 @@
                 <h2 class="text-3xl font-bold mb-2 uppercase italic tracking-tight">Lake Oswego Compliant</h2>
                 <p class="text-blue-100 opacity-90 max-w-md text-lg leading-snug">NO ballast tanks ever installed. Meets all current LOC weight and wake enhancement regulations. Launch-ready today.</p>
             </div>
-            <div class="flex items-center space-x-2 text-blue-200 border border-blue-500/50 bg-blue-800/40 px-4 py-2 rounded-lg">
+            <div class="flex items-center space-x-2 text-blue-200 border border-blue-500/50 bg-blue-800/40 px-4 py-2 rounded-lg pointer-events-none select-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -92,46 +92,72 @@
             </div>
         </section>
 
-        <div class="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-                <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Condition & Care</h3>
+        <section class="mb-16">
+            <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Condition & Care</h3>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
                 <p class="text-gray-700 mb-6 leading-relaxed">
-                    This boat has spent its entire life on the fresh waters of Lake Oswego. Meticulously maintained as the second owners.
+                    This boat has spent its entire life on the fresh waters of Lake Oswego. Meticulously maintained as the second owners, it represents a turn-key opportunity for local boating.
                 </p>
-                <ul class="space-y-4 text-gray-700">
-                    <li class="flex items-start">
-                        <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                        Professional dry storage every winter season.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                        Excellent cosmetic condition; interior vinyl is soft and well-kept.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
-                        Fully winterized and serviced annually.
-                    </li>
-                </ul>
+                <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
+                            Professional dry storage every winter season.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
+                            <strong>Full GatorStep Decking:</strong> Premium non-slip flooring throughout the cockpit and swim platform (no carpet).
+                        </li>
+                    </ul>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
+                            Excellent cosmetic condition; interior vinyl is soft and well-kept.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-orange-100 text-orange-600 p-1 rounded-full mr-3 text-sm">✔</span>
+                            Fully winterized and serviced annually.
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Features</h3>
+        <section class="mb-16">
+            <h3 class="text-2xl font-black uppercase mb-6 accent-border inline-block">Premium Features</h3>
+            <div class="grid md:grid-cols-3 gap-6">
                 <div class="space-y-4">
-                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
-                        <h4 class="font-bold text-black uppercase text-sm mb-1">Upgraded Foil/Board Racks</h4>
-                        <p class="text-gray-600 text-sm">Handles everything from standard wakeboards to large foils.</p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
+                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Performance</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><strong class="text-black">Cruise Control:</strong> Maintain precision speed for wake sports.</li>
+                            <li><strong class="text-black">Skylon Skylock Racks:</strong> Premium board and foil storage.</li>
+                            <li><strong class="text-black">Pickle-Fork Bow:</strong> Social seating for 11 passengers.</li>
+                        </ul>
                     </div>
-                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
-                        <h4 class="font-bold text-black uppercase text-sm mb-1">Cruise Control</h4>
-                        <p class="text-gray-600 text-sm">Maintains consistent speeds for surfing or wakeboarding.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
+                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Audio & Tech</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><strong class="text-black">Tower Speakers:</strong> High-output sound for the rider.</li>
+                            <li><strong class="text-black">Bluetooth Amp:</strong> Seamless wireless audio integration.</li>
+                            <li><strong class="text-black">Marine Grade Amp:</strong> Dedicated power for clear tower audio.</li>
+                        </ul>
                     </div>
-                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
-                        <h4 class="font-bold text-black uppercase text-sm mb-1">Pickle-Fork Bow</h4>
-                        <p class="text-gray-600 text-sm">Social seating for up to 11 passengers.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
+                        <h4 class="font-bold text-black uppercase text-sm mb-2 border-b border-gray-100 pb-2">Lighting & Deck</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><strong class="text-black">Life Form Lighting:</strong> Underwater and interior LED systems.</li>
+                            <li><strong class="text-black">Swim Platform Lights:</strong> Life Form LEDs under the platform.</li>
+                            <li><strong class="text-black">Full GatorStep:</strong> Coverage across the cockpit and swim platform.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section class="relative bg-black text-white p-12 rounded-[2rem] text-center shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-center">
             <div class="absolute inset-0 z-0">
@@ -165,7 +191,6 @@
             <p class="text-gray-500 uppercase tracking-widest text-sm mb-12">Lake Oswego, OR</p>
             
             <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <!-- Facebook Marketplace Link -->
                 <a href="#" target="_blank" class="flex items-center space-x-3 bg-[#1877F2] text-white px-8 py-4 rounded-full text-lg font-black hover:bg-[#166fe5] transition-all shadow-lg uppercase tracking-wider w-full md:w-auto justify-center">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                         <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-8.783h-2.954v-3.429h2.954v-2.527c0-2.925 1.787-4.52 4.398-4.52 1.251 0 2.328.093 2.64.135v3.061h-1.812c-1.419 0-1.694.675-1.694 1.664v2.187h3.388l-.441 3.429h-2.947v8.783h6.089c.733 0 1.325-.593 1.325-1.325v-21.351c0-.732-.592-1.325-1.325-1.325z"/>
@@ -173,7 +198,6 @@
                     <span>Inquire via Marketplace</span>
                 </a>
 
-                <!-- Craigslist Link -->
                 <a href="#" target="_blank" class="flex items-center space-x-3 bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-black hover:bg-purple-800 transition-all shadow-lg uppercase tracking-wider w-full md:w-auto justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z" />
@@ -186,7 +210,6 @@
         </footer>
     </main>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black bg-opacity-95 flex items-center justify-center p-4 md:p-12 cursor-zoom-out" onclick="closeLightbox()">
         <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-orange-500 transition-colors">&times;</button>
         <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl object-contain" alt="Enlarged view">
