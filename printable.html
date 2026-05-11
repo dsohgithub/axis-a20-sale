@@ -1,0 +1,140 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis A20 Sales Flyer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; background: white; }
+            .no-print { display: none; }
+            @page {
+                size: letter;
+                margin: 0;
+            }
+            .page-container {
+                box-shadow: none;
+                border: none;
+                width: 8.5in;
+                height: 11in;
+            }
+        }
+        .page-container {
+            width: 8.5in;
+            height: 11in;
+            /* Reduced top padding */
+            padding: 0.25in 0.5in 0.5in 0.5in;
+            background: white;
+            position: relative;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center py-4">
+
+    <div class="page-container shadow-2xl border border-gray-200">
+        <!-- Header -->
+        <header class="flex justify-between items-end border-b-4 border-orange-600 pb-2 mb-4">
+            <div>
+                <h1 class="text-5xl font-black uppercase tracking-tighter text-black leading-none">2012 Axis A20</h1>
+                <p class="text-xl text-gray-600 font-bold uppercase tracking-widest mt-1">Oswego Lake Ready</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-orange-600 leading-none">$36,000 OBO</p>
+                <p class="text-sm font-bold text-gray-500 uppercase mt-1">880 Hours</p>
+            </div>
+        </header>
+
+        <!-- Main Hero Image -->
+        <section class="mb-4 h-[3.2in] overflow-hidden rounded-2xl relative">
+            <img src="https://dsohgithub.github.io/axis-a20-sale/FullSizeRender.jpeg" class="w-full h-full object-cover" alt="Axis A20 Main View">
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-3 gap-6">
+            
+            <!-- Left Column: Specs -->
+            <div class="col-span-2 space-y-6">
+                <div>
+                    <h2 class="text-lg font-black uppercase border-b-2 border-gray-200 mb-2">Vessel Overview</h2>
+                    <p class="text-sm text-gray-700 leading-snug">
+                        Exclusively used on Lake Oswego. Meticulously maintained second owners. Stored in professional dry storage every off-season. Turn-key boat in excellent condition for its age.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-1">Board Racks</h3>
+                        <p class="text-xs font-bold">Skylon Skylock (Foil Ready)</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-1">Flooring</h3>
+                        <p class="text-xs font-bold">Full GatorStep Cockpit/Platform</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-1">Audio</h3>
+                        <p class="text-xs font-bold">Tower Speakers + Bluetooth Amp</p>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <h3 class="text-[10px] font-bold uppercase text-gray-400 mb-1">Lighting</h3>
+                        <p class="text-xs font-bold">Life Form Underwater LEDs</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-black uppercase border-b-2 border-gray-200 mb-2 text-orange-600">Included Package</h2>
+                    <ul class="text-xs font-bold grid grid-cols-2 gap-y-2 uppercase text-gray-700">
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> Axis Tandem-Axle Trailer</li>
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> Factory Cruise Control</li>
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> Custom Fitted Cover</li>
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> 11 Person Capacity</li>
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> Life Vests & Buoys</li>
+                        <li class="flex items-center"><span class="text-orange-500 mr-2 text-[8px]">●</span> Dock Lines Included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Images and QR -->
+            <div class="col-span-1 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_9505.jpeg" class="w-full h-32 object-cover rounded-xl shadow-sm" alt="Boat on trailer with Jeep">
+                    <img src="https://dsohgithub.github.io/axis-a20-sale/IMG_0290.jpeg" class="w-full h-32 object-cover rounded-xl shadow-sm" alt="Cockpit view">
+                </div>
+
+                <div class="mt-auto pt-4 text-center bg-white p-4 border-2 border-dashed border-gray-200 rounded-2xl">
+                    <img src="https://dsohgithub.github.io/axis-a20-sale/BoatQR.png" class="w-32 h-32 mx-auto" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Contact -->
+        <footer class="absolute bottom-[0.5in] left-[0.5in] right-[0.5in] flex justify-between items-end border-t-2 border-gray-100 pt-4">
+            <div class="flex flex-col text-xs font-bold text-black uppercase tracking-widest leading-tight">
+                <span>503-841-7130</span>
+                <span>dsohigian@gmail.com</span>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-gray-400 italic">
+                Serious Inquiries Only ● No Trades
+            </div>
+        </footer>
+    </div>
+
+    <!-- Print Prompt UI -->
+    <div class="no-print fixed top-4 right-4 bg-white p-4 rounded-xl shadow-xl border border-gray-200">
+        <p class="text-xs font-bold mb-3 uppercase tracking-widest text-gray-500">Printing Tips:</p>
+        <ul class="text-[10px] text-gray-600 mb-4 space-y-1 list-disc pl-4">
+            <li>Set layout to <strong>Portrait</strong></li>
+            <li>Paper size: <strong>Letter</strong></li>
+            <li>Enable <strong>Background Graphics</strong></li>
+            <li>Margins: <strong>None</strong></li>
+        </ul>
+        <button onclick="window.print()" class="w-full bg-black text-white font-black py-2 rounded-lg uppercase text-xs tracking-widest hover:bg-gray-800 transition-colors">
+            Print Flyer
+        </button>
+    </div>
+
+</body>
+</html>
